@@ -1,0 +1,38 @@
+.rates {
+  display: flex;
+  align-items: flex-start;
+  font-size: 18px;
+  padding-left: 0;
+  margin: 0;
+  color: #fff;
+  max-width: 700px;
+  flex-wrap: wrap;
+
+  &__item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-bottom: 12px;
+    min-width: 170px;
+
+    &-currency{
+      margin-right: 20px;
+    }
+
+    &-direction{
+      width: 12px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right: 15px;
+      background-image: url("../img/arrow-up.png");
+
+      &--down{
+        background-image: url("../img/arrow-down.png");
+      }
+    }
+  }
+}
+

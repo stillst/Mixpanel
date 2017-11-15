@@ -1,0 +1,29 @@
+.header {
+  background-color: rgba(0,0,0,0.08);
+
+  &__wrapper {
+    display: flex;
+    max-width: $wrapper;
+    min-height: 55px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.4s;
+
+    &:hover {
+      color: $yellow-dark;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+}

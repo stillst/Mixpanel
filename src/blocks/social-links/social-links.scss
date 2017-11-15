@@ -1,0 +1,32 @@
+// В этом файле должны быть стили для БЭМ-блока social-links, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.social-links {
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 16px;
+  border: solid 2px rgba(255,255,255,0.11);
+  background-repeat: no-repeat;
+
+  &:hover{
+    border: solid 2px $yellow-dark;
+  }
+
+  &--telegram{
+    background-image:url("../img/telegram.png");
+    background-position: 3px 6px;
+  }
+
+  &--facebook{
+    background-image:url("../img/facebook.png");
+    background-position: 7px 4px;
+  }
+
+  &--twitter{
+    background-image:url("../img/twitter.png");
+    background-position: 4px 6px;
+  }
+}

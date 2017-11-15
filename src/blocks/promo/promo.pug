@@ -1,0 +1,30 @@
+mixin promo()
+  .promo
+    .promo__wrapper
+      #promo-how.promo__tab.promo__tab--active
+        h1.promo__title The future of post trade
+        p.promo__txt Our mission is new technology meets experience. We’ve gathered the best in finance with some of the most innovative.
+        .promo__links
+          +btn-link("see it in action")
+          +btn-link("explore the features")
+        .promo__more
+          p.promo__more-txt Pay after you get result
+          a(class='promo__more-link' href='#') More info
+      #promo-about.promo__tab
+        h2.promo__title Understand every user's journey
+        p.promo__txt Follow the digital footprint of every user across mobile and web devices. Know precisely what happens inside your product.
+        .promo__links
+          +btn-link("solutions")
+          +btn-link("features")
+        .promo__more
+          p.promo__more-txt Pay after you get result
+          a(class='promo__more-link' href='#') More info
+      #promo-contact.promo__tab
+        h2.promo__title Build faster with instant answers
+        p.promo__txt Pull up the numbers you need at a moment's notice. Experiment immediately with A/B testing and notifications.
+        .promo__links
+          +btn-link("contact us")
+          +btn-link("log in")
+        .promo__more
+          p.promo__more-txt Pay after you get result
+          a(class='promo__more-link' href='#') More info

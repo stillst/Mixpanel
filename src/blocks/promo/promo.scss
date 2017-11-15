@@ -1,0 +1,138 @@
+.promo {
+  padding-top: 60px;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: $wrapper;
+    margin: 0 auto;
+    min-height: 660px;
+    background-image: url("../img/promo-buildings.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 150px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 80px;
+      right: 0;
+      height: 29px;
+      width: 53px;
+      background-image: url("../img/helicopter.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: flight 10s  alternate 0.5s infinite;
+    }
+  }
+
+  &__tab{
+    display: none;
+    flex-direction: column;
+    &--active{
+      display: flex;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: 46px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 50px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      left: 0;
+      height: 5px;
+      width: 30px;
+      background-color: red;
+      background-image: linear-gradient(to right, $yellow-light, $yellow-dark);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      left: 40px;
+      height: 5px;
+      width: 90px;
+      background-color: red;
+      background-image: linear-gradient(to right, $yellow-light, $yellow-dark);
+    }
+  }
+
+  &__txt {
+      width: 650px;
+      font-size: 24px;
+      color: #ffffff;
+      margin-bottom: 50px;
+  }
+
+  &__links {
+    display: flex;
+  }
+
+
+  &__more {
+    padding-left: 60px;
+    position: relative;
+
+    &:before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 40px;
+      height: 40px;
+      background-image: url("../img/safe.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &-txt {
+      margin-top: 0;
+      margin-bottom: 3px;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    &-link {
+      position: relative;
+      color: #ffb465;
+      &:hover{
+        &:before{
+          transform: translateY(-5px);
+        }
+      }
+
+        &:before{
+          content: "";
+          position: absolute;
+          right: -20px;
+          bottom: -5px;
+          width: 10px;
+          height: 8px;
+          background-image: url("../img/arrow.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          transition: all 0.4s;
+      }
+    }
+  }
+}
+
+
+@keyframes flight {
+  from {transform: translateX(0) translateY(0) rotateY(0);
+
+  }
+  to {transform: translateX(-400px) translateY(-40px) rotateY(180deg) ;
+
+  }
+}
+
+

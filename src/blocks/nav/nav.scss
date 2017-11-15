@@ -1,0 +1,154 @@
+.nav {
+    background-color: $gray;
+    padding-top: 55px;
+    padding: 70px;
+
+    &__items {
+        display: flex;
+        margin: 0 auto;
+        max-width: $wrapper;
+        padding-left: 0;
+        justify-content: space-between;
+    }
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  max-width: 270px;
+  list-style: none;
+  padding: 90px 25px 25px 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+
+  &:hover {
+    .nav-item__link{
+      transform: translateY(-10px);
+    }
+  }
+
+  &:after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+  &__title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 18px;
+  }
+
+  &__txt {
+      font-size: 16px;
+      margin-bottom: 60px;
+  }
+
+  &--recon {
+      background-image: url("../img/navitem-bgrecon.jpg");
+
+      &:after {
+          width: 29px;
+          height: 23px;
+          background-image: url("../img/navitem-iconrecon.png");
+      }
+
+      .nav-item__link {
+
+          border-color: $yellow-dark;
+
+          &:hover {
+              background-image: linear-gradient(to bottom, $yellow-light, $yellow-dark);
+          }
+      }
+
+  }
+
+  &--slow {
+      background-image: url("../img/navitem-bgslow.jpg");
+
+      &:after {
+          width: 33px;
+          height: 23px;
+          background-image: url("../img/navitem-iconslow.png");
+      }
+
+      .nav-item__link {
+
+        border-color: $blue-dark;
+
+        &:hover {
+            background-image: linear-gradient(to bottom, $blue-light, $blue-dark);
+        }
+      }
+  }
+
+  &--innovation
+   {
+      background-image: url("../img/navitem-bginnovation.jpg");
+
+      &:after {
+          width: 39px;
+          height: 23px;
+          background-image: url("../img/navitem-iconinnovation.png");
+      }
+      .nav-item__link {
+
+        border-color:  $violet-dark;
+
+        &:hover {
+            background-image: linear-gradient(to bottom, $violet-light, $violet-dark);
+        }
+      }
+  }
+
+  &--exp {
+      background-image: url("../img/navitem-bgexp.jpg");
+      &:after {
+          width: 37px;
+          height: 28px;
+          background-image: url("../img/navitem-iconexp.png");
+      }
+
+      .nav-item__link {
+
+          border-color:  $aquamarine-dark;
+
+          &:hover {
+              background-image: linear-gradient(to bottom, $aquamarine-light, $aquamarine-dark);
+          }
+      }
+  }
+
+  &__link {
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      border-radius: 100px;
+      border-style: solid;
+      border-width: 2px;
+      box-shadow: inset 0 0 3px #fff;
+
+      padding: 8px 42px 8px 30px;
+
+      transition: all 0.4s;
+      &:after {
+          content: "";
+          position: absolute;
+          right: 20px;
+          top: 15px;
+          width: 10px;
+          height: 8px;
+          background-image: url("../img/navlink-arrow.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+      }
+  }
+}

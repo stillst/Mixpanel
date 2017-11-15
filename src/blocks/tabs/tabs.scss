@@ -1,0 +1,39 @@
+// В этом файле должны быть стили для БЭМ-блока tabs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.tabs {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 45px;
+
+  &:hover{
+    &:before{
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      left: 0;
+      height: 4px;
+      width: 50px;
+      background-color: red;
+      background-image: linear-gradient(to right, $blue-light, $blue-dark);
+    }
+  }
+
+
+  &--active{
+    &:before{
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      left: 0;
+      height: 4px;
+      width: 50px;
+      background-color: $yellow-dark;
+      background-image: linear-gradient(to right, $yellow-light, $yellow-dark);
+    }
+  }
+}
