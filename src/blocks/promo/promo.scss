@@ -12,18 +12,23 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 150px;
+  }
 
-    &:before {
-      content: "";
-      position: absolute;
-      top: 80px;
-      right: 0;
-      height: 29px;
-      width: 53px;
-      background-image: url("../img/helicopter.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      animation: flight 10s  alternate 0.5s infinite;
+  &__helicopter {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    height: 29px;
+    width: 53px;
+    background-image: url("../img/helicopter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: flight 10s  alternate 0.5s infinite;
+    cursor: pointer;
+
+    &--down{
+      animation: blackhawkgoesdown ease-in 2s;
+      animation-fill-mode: forwards;
     }
   }
 
@@ -131,6 +136,13 @@
 
   }
   to {transform: translateX(-400px) translateY(-40px) rotateY(180deg) ;
+
+  }
+}
+
+@keyframes blackhawkgoesdown {
+
+  to {transform: translateX(0) translateY(600px) rotateY(180deg) ;
 
   }
 }

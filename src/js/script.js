@@ -48,22 +48,29 @@ ready(function(){
     function showTicker(){
       var ticker = document.getElementById('ticker');
       var tickerWrapper = document.createElement("div");
+      var ourCurrencies = ["BGN", "CAD", "CHF", "RUB", "EUR", "GBP" , "CNY", "CZK", "DKK" ,"HKD", "HRK", "HUF",
+     "IDR", "ILS", "INR", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PLN", "RON",
+     "SEK", "SGD", "THB", "TRY", "ZAR"];
+      var distance = ourCurrencies.length * 150;
       tickerWrapper.classList.add("ticker__wrapper");
 
-      var rub = todayCurrency["rates"]["RUB"];
-      var eur = todayCurrency["rates"]["EUR"];
+      var cssAnimation = document.createElement('style');
+      cssAnimation.type = 'text/css';
+      var rules = document.createTextNode('@keyframes move {'+
+      'from {transform: translateX(0)}'+
+      `to {transform: translateX(-${distance}px)}`);
+      cssAnimation.appendChild(rules);
+      document.getElementsByTagName("head")[0].appendChild(cssAnimation);
 
-      for (var i = 0; i <= 10; i++){
+
+      ourCurrencies.forEach(function(curency, i) {
           var item = document.createElement("span");
-          item.classList.add("ticker__rub");
-          item.innerHTML = `RUB/USD ${rub}`;
+          item.classList.add("ticker__cur");
+          var currencyRate = todayCurrency["rates"][curency];
+          item.innerHTML = `${curency}/USD ${currencyRate}`;
           tickerWrapper.appendChild(item);
+      });
 
-          item = document.createElement("span");
-          item.classList.add("ticker__eur");
-          item.innerHTML = `EUR/USD ${eur}`;
-          tickerWrapper.appendChild(item);
-      }
 
       ticker.appendChild(tickerWrapper);
     }
@@ -167,6 +174,7 @@ ready(function(){
   })
 
   changeTab();
+  helicopterDown();
 
   function changeTab(){
     var tabs = document.getElementsByClassName("tabs");
@@ -208,5 +216,15 @@ ready(function(){
       });
     }
   }
+
+  function helicopterDown(){
+    var helicopter = document.getElementById("promo-helicopter");
+    helicopter.addEventListener( "click", function(event) {
+        helicopter.classList.add('promo__helicopter--down');
+        setTimeout(function() { helicopter.style.display="none"}, 3000);
+      }
+    );
+  }
+
 });
 })();

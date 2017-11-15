@@ -5,6 +5,7 @@
 .ticker {
 
   display: flex;
+  position: relative;
   min-height: 60px;
   justify-content: space-around;
   align-items: center;
@@ -12,7 +13,7 @@
   overflow-x:hidden;
 
 
-  &__rub, &__eur{
+  &__cur{
     color: #fff;
     font-size:  16px;
     line-height: 30px;
@@ -23,13 +24,15 @@
 
   &__wrapper{
     display: flex;
+    position: absolute;
+    left: 0;
     justify-content: space-around;
-    animation: move 20s linear 0.5s infinite;
+    animation: move 80s linear 0.5s infinite;
   }
 }
 
 
-@keyframes move {
-  from {transform: translateX(0)}
-  to {transform: translateX(-1000px)}
-}
+// @keyframes move {
+//   from {transform: translateX(0)}
+//   to {transform: translateX(-4500px)}
+// }
