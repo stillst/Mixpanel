@@ -1,4 +1,4 @@
-# MixPanel promo 
+[MixPanel promo](https://stillst.github.io/Mixpanel/build/)
 
 Установка: `npm i`.
 
