@@ -1,6 +1,4 @@
-# MixPanel promo [![devDependencies Status](https://david-dm.org/epixx/start-kit/dev-status.svg)](https://david-dm.org/epixx/start-kit?type=dev) [![dependencies Status](https://david-dm.org/epixx/start-kit/status.svg)](https://david-dm.org/epixx/start-kit)
-
-MixPanel promo
+# MixPanel promo 
 
 Установка: `npm i`.
 
