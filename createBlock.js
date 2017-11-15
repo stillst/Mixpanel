@@ -35,7 +35,7 @@ if(blockName) {
 
         // Если это scss
         if (extention === 'scss') {
-          fileContent = `// В этом файле должны быть стили для БЭМ-блока ${blockName}, его элементов, \n// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...\n// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority\n\n.${blockName} {\n\n  $block-name:                &; // #{$block-name}__element\n\n}\n`;
+          fileContent ="" // `// В этом файле должны быть стили для БЭМ-блока ${blockName}, его элементов, \n// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...\n// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority\n\n.${blockName} {\n\n  $block-name:                &; // #{$block-name}__element\n\n}\n`;
           let styleFileImport = '@import \'' + dirPath + blockName + '.scss\';';
 
           // Читаем файл диспетчера подключений

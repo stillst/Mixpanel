@@ -1,10 +1,6 @@
 .twitter {
-
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  &__header{
-    display: flex;
-    justify-content: space-between;
-  }
+  margin: 0 auto;
 }

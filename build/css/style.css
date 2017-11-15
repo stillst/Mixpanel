@@ -23,19 +23,19 @@
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 .sprite-facebook {
-  background-image: url(../img/sprite-007692043601935117.png);
+  background-image: url(../img/sprite-08068273119238258.png);
   background-position: 0px -19px;
   width: 11px;
   height: 20px; }
 
 .sprite-telegram {
-  background-image: url(../img/sprite-007692043601935117.png);
+  background-image: url(../img/sprite-08068273119238258.png);
   background-position: -23px 0px;
   width: 18px;
   height: 15px; }
 
 .sprite-twitter {
-  background-image: url(../img/sprite-007692043601935117.png);
+  background-image: url(../img/sprite-08068273119238258.png);
   background-position: 0px 0px;
   width: 19px;
   height: 15px; }
@@ -330,7 +330,8 @@ img {
   color: #fff;
   max-width: 700px;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin: 0 auto; }
   .rates__item {
     list-style: none;
     display: -webkit-box;
@@ -365,14 +366,8 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 500px; }
-  .twitter__header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+  max-width: 500px;
+  margin: 0 auto; }
 
 .nav {
   background-color: #f0f1f3;
@@ -578,6 +573,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 20px 0; }
 
 /*# sourceMappingURL=style.css.map */

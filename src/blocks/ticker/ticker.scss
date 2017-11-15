@@ -1,6 +1,3 @@
-// В этом файле должны быть стили для БЭМ-блока ticker, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .ticker {
 
@@ -30,7 +27,6 @@
     animation: move 80s linear 0.5s infinite;
   }
 }
-
 
 // @keyframes move {
 //   from {transform: translateX(0)}
