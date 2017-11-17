@@ -175,6 +175,46 @@ ready(function(){
 
   changeTab();
   helicopterDown();
+  navAnimate();
+
+  function navAnimate(){
+    var isOnNavItem = false;
+    var navItems = document.getElementsByClassName("nav-item");
+    console.log(navItems);
+
+    for (var i = 0; i< navItems.length; i++) {
+
+        navItems[i].addEventListener("mouseleave", function(e) {
+          e.target.style.transform="rotateY(0) rotateX(0) rotateZ(0) scale(1)";
+        });
+
+        navItems[i].addEventListener("mousemove", function(e) {
+
+              var navItem = e.path.filter(function(number) {
+                if (number.classList){
+                  if(number.classList.contains("nav-item") ){
+                    return true;
+                  }
+                }
+                return false;
+              });
+
+              var offsets = navItem[0].getBoundingClientRect();
+              var topNav = offsets.top;
+              var leftNav = offsets.left;
+              var topView = e.clientY;
+              var leftView = e.clientX;
+
+              var x = -((topView - topNav)/20 -10);
+              var y = ((leftView - leftNav)/20 -5);
+
+              console.log("x:" + x);
+              console.log("y:" + y);
+
+              navItem[0].style.transform=`rotateY(${y}deg) rotateX(${x}deg) rotateZ(0deg) scale(1)`;
+        });
+    }
+  }
 
   function changeTab(){
     var tabs = document.getElementsByClassName("tabs");

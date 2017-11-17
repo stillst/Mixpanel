@@ -23,19 +23,19 @@
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 .sprite-facebook {
-  background-image: url(../img/sprite-08068273119238258.png);
+  background-image: url(../img/sprite-04416767994027322.png);
   background-position: 0px -19px;
   width: 11px;
   height: 20px; }
 
 .sprite-telegram {
-  background-image: url(../img/sprite-08068273119238258.png);
+  background-image: url(../img/sprite-04416767994027322.png);
   background-position: -23px 0px;
   width: 18px;
   height: 15px; }
 
 .sprite-twitter {
-  background-image: url(../img/sprite-08068273119238258.png);
+  background-image: url(../img/sprite-04416767994027322.png);
   background-position: 0px 0px;
   width: 19px;
   height: 15px; }
@@ -372,7 +372,9 @@ img {
 .nav {
   background-color: #f0f1f3;
   padding-top: 55px;
-  padding: 70px; }
+  padding: 70px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px; }
   .nav__items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -384,7 +386,9 @@ img {
     padding-left: 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d; }
 
 .nav-item {
   position: relative;
@@ -404,7 +408,9 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
   .nav-item:hover .nav-item__link {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px); }
